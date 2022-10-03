@@ -24,6 +24,29 @@
    The 'Summarize' operator can be used alongside aggregayion functions that can be classified as either; simple or advanced
      -  simple agggreagtion functions: count(), sum(), min() and max()
      -  advanced aggregation functions: percentiles(), arg_min(), arg_max(),  make_list(), cointif(), make_set(). 
- - Render: it allows one to visualize results genearted into charts and graphs. The visualization can be a bar graph, line graph, pie chart etc...
+
+- Extend: it creates calculated columns and appends them to the result set.
+    synatax: TableName
+             |extend [ColumnName] = Expression [field]
+         
+- Project: it's used to select the columns to include, it tells the query engine the exact data columns to show.
      syntax: TableName
-              |render 'visualization'
+             |project column1, column2, column3
+
+- Distinct: it produces a table with the distinct combination to the provided columns of the input table
+    syntax: TableName
+            |distinct 'field'
+- Order/Set: they have no functional differences and they do the same thing. they sort the rows of the input table into order by one or more columns
+
+- Join: it's used to produce more specific results by joining rows of just two tables through matching the values of columns you specify.
+    We have left join, full outer join, iner join, right join.
+    syntax: LeftTable
+            |join [join parameters] (RightTable) on Attributes
+- Union: it allows for one to take data from two or more tables and display the results together. 
+    syntax: TableNmae1
+            |union 'TableName2'
+- Render: it allows one to visualize results genearted into charts and graphs. The visualization can be a bar graph, line graph, pie chart etc...
+     syntax: TableName
+              |render 'visualization'          
+              
+      
