@@ -1,1 +1,29 @@
-
+- Print: prints the results of a query
+- Search:  allows you to search for specific data throughout the logs. Running search queries can help narrow down to the affected table in thelogs something occurs and then a workflow can be used to query it.
+    syntax: search n ("tablename") "searchitem"
+    
+- Where: filters a table to the subset of rows that satisfy a comparison
+    syntax: TableName
+            |where CounterName = "Free Data"
+  The 'Where' operator has allowable predicates that include:
+    - string predicates: == , has, contains, matches , regex, endswith, startswith. 
+    - numerical/date predicates: == ,  != , < , > , <= , >=
+    - empty predicates: isempty(), notempty(), isnull(), notnull()
+            
+       
+- Take/Limit: are similar and used for the smae purpose, it return sup the specified number of rows
+    syntax: TableName         or    TableName
+            |limit <number>         |take<Number>
+- Count: Returns the total numberof times something occurred
+    syntax: TableName
+             |count 
+             
+- Summarize: Produces a table that summarizes the content of selected columns: it summarizes data as per columns chosen
+    syntax: TableName
+            |summarize count() by 'ColumnName1' , 'ColumnName2'
+   The 'Summarize' operator can be used alongside aggregayion functions that can be classified as either; simple or advanced
+     -  simple agggreagtion functions: count(), sum(), min() and max()
+     -  advanced aggregation functions: percentiles(), arg_min(), arg_max(),  make_list(), cointif(), make_set(). 
+ - Render: it allows one to visualize results genearted into charts and graphs. The visualization can be a bar graph, line graph, pie chart etc...
+     syntax: TableName
+              |render 'visualization'
