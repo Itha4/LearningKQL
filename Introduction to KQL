@@ -16,4 +16,12 @@ The column types in KQL are:
 - Time: datetime, timespan
 - Complex: dynamic
 
+A few tricks when working iwth KQL:
+  - We use // for comments
+  - =~ is used for case insensitive situations.
+  - Keyboard Shortcuts:
+        -	To run queries created: Shift+ Enter
+        -	To start a new command line: CTRL+ Enter
+
+
 For the next series, i'll cover operators in KQl in order of how i'm learning them.
