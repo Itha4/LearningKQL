@@ -1,3 +1,5 @@
+TABULAR OPERATORS IN KQL
+
 - Print: prints the results of a query
 - Search:  allows you to search for specific data throughout the logs. Running search queries can help narrow down to the affected table in thelogs something occurs and then a workflow can be used to query it.
     syntax: search n ("tablename") "searchitem"
@@ -50,3 +52,15 @@
               |render 'visualization'          
               
       
+   QUERY STATEMENTS IN KQL
+-Let: creates variables: allows you to generat eyour own data and it is used at the beginning of the main query.
+The 'Let' operator is important as it allows Sentinel users to use the watchlist feature with their Analytics rule.
+    syntax:  let timeOffset = 7d;
+    let discardEventId = 4688;
+    TableName
+    |where TimmeGenerated > ago(timeOffset *2) and TimeGenerated < ago(timeOffset)
+    |where EventId != discardEventId.
+   SCALAR FUNCTIONS IN KQL
+- agoc(): it's used to subtract the given timespan from the current UTC clocktime
+- bin(): it rounds values down to an integer of a given size.
+   
