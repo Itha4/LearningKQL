@@ -5,5 +5,5 @@ This is an active repo and i'll be adding resources to it, so enjoy😁i hope yo
 # Resources Plug 🔌
 - https://github.com/rod-trent/MustLearnKQL this repo contains everything to get you started on KQl. Donwload the book as it will come in handy.
 - https://github.com/rod-trent/SentinelKQL this repo contains useful KQL queries that can be run on Sentinel to build Sentinel Amalyic rules.
-- https://detective.kusto.io/ participate in the challnge to get a kusto detective badge
+- https://detective.kusto.io/ participate in the challenge to get a kusto detective badge
 
