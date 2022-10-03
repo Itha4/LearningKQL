@@ -22,6 +22,13 @@ A few tricks when working iwth KQL:
   - Keyboard Shortcuts:
         -	To run queries created: Shift+ Enter
         -	To start a new command line: CTRL+ Enter
+        
+ In KQL, a standard query workflow is
+  TableName
+  |filter
+  |data aggregation
+  |data ordering 
+  |modifying results
 
 
 For the next series, i'll cover operators in KQl in order of how i'm learning them.
